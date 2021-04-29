@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import java.lang.Exception
 
 class Calculadora : AppCompatActivity() {
 
@@ -59,59 +60,89 @@ class Calculadora : AppCompatActivity() {
         var exp: String = ""
 
         btnCero.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "0"
             txtResultado.text = exp
         }
 
         btnUno.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "1"
             txtResultado.text = exp
         }
 
         btnDos.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "2"
             txtResultado.text = exp
         }
 
         btnTres.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "3"
             txtResultado.text = exp
         }
         btnCuatro.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "4"
             txtResultado.text = exp
         }
 
         btnCinco.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "5"
             txtResultado.text = exp
         }
 
         btnSeis.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "6"
             txtResultado.text = exp
         }
 
         btnSiete.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "7"
             txtResultado.text = exp
         }
 
         btnOcho.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "8"
             txtResultado.text = exp
         }
 
         btnNueve.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "9"
             txtResultado.text = exp
@@ -120,26 +151,35 @@ class Calculadora : AppCompatActivity() {
 
 
         btnMas.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             var exp1 = txtRes.text.toString()
             if(!(exp.isBlank() and exp.isEmpty())){
-                exp1 += exp + "+"
+                exp1 += "$exp+"
                 txtRes.text = exp1
                 txtResultado.text=""
             }
         }
 
         btnMenos.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             var exp1 = txtRes.text.toString()
             if(!(exp.isBlank() and exp.isEmpty())){
-                exp1 += exp + "-"
+                exp1 += "$exp-"
                 txtRes.text = exp1
                 txtResultado.text=""
             }
         }
 
         btnMultip.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             var exp1 = txtRes.text.toString()
             if(!(exp.isBlank() and exp.isEmpty())){
@@ -150,16 +190,22 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnDivide.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             var exp1 = txtRes.text.toString()
             if(!(exp.isBlank() and exp.isEmpty())){
-                exp1 += exp + "÷"
+                exp1 += "$exp÷"
                 txtRes.text = exp1
                 txtResultado.text=""
             }
         }
 
         btnPoint.setOnClickListener{
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
+            }
             exp = txtResultado.text.toString()
             exp += "."
             txtResultado.text = exp
@@ -171,17 +217,26 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnEquals.setOnClickListener{
-            exp = txtResultado.text.toString()
-            var exp1 = txtRes.text.toString()
-            if(!(exp.isBlank() and exp.isEmpty())){
-                exp1 += exp
-                txtRes.text = exp1
+            if(txtResultado.text.toString().equals("Error", true)){
+                txtResultado.text = ""
             }
-            print(exp1)
-            var infixToPostfix = converter.convert(exp1)
-            var temp = calculadora.calcular(infixToPostfix)
-            txtResultado.text = temp
-            txtRes.text = ""
+            try {
+                exp = txtResultado.text.toString()
+                var exp1 = txtRes.text.toString()
+                if(!(exp.isBlank() and exp.isEmpty())){
+                    exp1 += exp
+                    txtRes.text = exp1
+                }
+                var infixToPostfix = converter.convert(exp1)
+                var temp = calculadora.calcular(infixToPostfix)
+                txtResultado.text = temp
+                txtRes.text = ""
+            }
+            catch (e:Exception){
+                txtResultado.text = "Error"
+                txtRes.text = ""
+            }
+
         }
 
     }
