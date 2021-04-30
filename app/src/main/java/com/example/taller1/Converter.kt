@@ -18,9 +18,13 @@ class Converter(
                 acu += element;
             }
             else if(operands.contains(element)){
-                while(!stack.isEmpty()){
+                var temp = false
+                while(!stack.isEmpty() and !temp){
                     if(checkPrecedence(element) <= checkPrecedence(stack.peek())){
                         acu += " " + stack.pop()
+                    }
+                    else{
+                        temp = true
                     }
                 }
                 stack.push(element)
@@ -36,8 +40,7 @@ class Converter(
 
     private fun checkPrecedence(item: String): Int{
         var pr1 = "+-"
-        var pr2 = "x÷"
-        if(pr1.contains(item)) return 1 else return 2
+        return if(pr1.contains(item)) 1 else 2
 
     }
 

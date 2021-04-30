@@ -10,8 +10,9 @@ class CalcTest {
     fun calcular() {
         var calculadora: Calc = Calc()
         var converter: Converter = Converter()
-        var conv = converter.convert("5-6+2")
+        var conv = converter.convert("5-6x2")
+        println(conv)
         var res = calculadora.calcular(conv)
-        assertEquals("No funciono calcular", res, "1.0")
+        assertEquals("No funciono calcular", res, "-7.0")
     }
 }

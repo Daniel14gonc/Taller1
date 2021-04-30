@@ -60,7 +60,7 @@ class Calculadora : AppCompatActivity() {
         var exp: String = ""
 
         btnCero.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -69,7 +69,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnUno.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -78,7 +78,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnDos.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -87,7 +87,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnTres.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -95,7 +95,7 @@ class Calculadora : AppCompatActivity() {
             txtResultado.text = exp
         }
         btnCuatro.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -104,7 +104,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnCinco.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -113,7 +113,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnSeis.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -122,7 +122,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnSiete.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -131,7 +131,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnOcho.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -140,7 +140,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnNueve.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -151,7 +151,7 @@ class Calculadora : AppCompatActivity() {
 
 
         btnMas.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -164,7 +164,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnMenos.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -177,7 +177,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnMultip.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -190,7 +190,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnDivide.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -203,7 +203,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnPoint.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             exp = txtResultado.text.toString()
@@ -217,7 +217,7 @@ class Calculadora : AppCompatActivity() {
         }
 
         btnEquals.setOnClickListener{
-            if(txtResultado.text.toString().equals("Error", true)){
+            if(txtResultado.text.toString().equals("Error", true) or txtResultado.text.toString().equals("Infinity", true)){
                 txtResultado.text = ""
             }
             try {
